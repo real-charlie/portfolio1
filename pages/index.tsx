@@ -29,6 +29,7 @@ const muiTheme = createTheme({
             default: '#212121'
         }
     },
+    
     spacing: [5, 10, 15, 18, 0, 0, 0, 30, 35, 40],
     typography: {
         fontFamily: 'DM Sans, serif',
