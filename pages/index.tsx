@@ -84,11 +84,7 @@ export default function Home() {
 
                 <nav>
                     
-                    <NavigationBar servicesClick={() =>
-                    // @ts-ignore
-                     servicesRef.current && servicesRef.current.scrollIntoView()} 
-                    aboutClick={() => {}} 
-                    contactClick={() => {}}/>
+                    <NavigationBar />
                 </nav>
 
                 <Box component={'main'} display={'flex'} flexDirection={'column'} alignItems={'center'} gap={'47px'} maxWidth={'100%'}>
