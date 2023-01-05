@@ -4,10 +4,10 @@ import {css} from "@emotion/css";
 /**
  * Has a title with paragraph
  * */
-const Section = ({title, children}: { title: string, children: any }) => {
+const Section = ({title, children, id}: { title: string, children: any, id?: string }) => {
 
     return (
-        <Grid container direction={'column'} alignItems={'center'} spacing={8}>
+        <Grid container direction={'column'} alignItems={'center'} spacing={8} padding={3} id={id}>
             <Grid item>
                 <Typography variant={'h1'} color={'textPrimary'} fontWeight={'bold'}>
                     {title}

@@ -16,7 +16,7 @@ const Connect = () => {
     ]
 
     return (
-        <Section title={language.getInTouch}>
+        <Section title={language.getInTouch} id={'contact'}>
             <Grid container>
                 {
                     socialMedia.map(

@@ -15,7 +15,7 @@ const Services = () => {
 
     return (
         <Container>
-            <Section title={language.whatIDo}>
+            <Section title={language.whatIDo} id='services'>
                 <Grid container spacing={1} justifyContent={'center'}>
                     {
                         services.map(
@@ -32,5 +32,6 @@ const Services = () => {
         </Container>
     )
 }
+
 
 export default Services

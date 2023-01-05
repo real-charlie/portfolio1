@@ -17,7 +17,7 @@ const LanguageSkills = () => {
 
     return (
         <Section title={language.languages}>
-            <Grid container direction={'column'} spacing={2}>
+            <Grid container direction={'column'} spacing={2} padding={3}>
                 {
                     skills.map(
                         (each, index) =>

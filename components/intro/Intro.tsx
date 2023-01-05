@@ -5,7 +5,7 @@ const Intro = () => {
     const language = useAppSelector((state) => state.languageReducer)
 
     return (
-        <Grid container direction={'column'} spacing={8} sx={{direction: 'ltr'}}>
+        <Grid container direction={'column'} spacing={8} sx={{direction: 'ltr'}} id='intro'>
             <Grid item>
                 <Grid container
                       direction={'column'}
@@ -28,13 +28,13 @@ const Intro = () => {
             <Grid item>
                 <Grid container spacing={1}>
                     <Grid item>
-                        <Button variant={'contained'} color={'primary'}>
+                        <Button variant={'contained'} color={'primary'} href='/cv.pdf'>
                             Download CV
                         </Button>
                     </Grid>
 
                     <Grid item>
-                        <Button variant={'outlined'} color={'primary'}>
+                        <Button variant={'outlined'} color={'primary'} href={'https://www.linkedin.com/in/alisalehikia'}>
                             Learn more
                         </Button>
                     </Grid>

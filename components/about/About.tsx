@@ -16,7 +16,7 @@ function About() {
     ]
 
     return (
-        <Grid container direction={'column'} alignItems={'center'} spacing={8}>
+        <Grid container direction={'column'} alignItems={'center'} spacing={8} padding={3} id='about'>
             <Grid item>
                 <Section title={language.aboutMe}>
                     {language.aboutText}

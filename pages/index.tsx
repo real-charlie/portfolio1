@@ -5,7 +5,7 @@ import NavigationBar from "../components/navbar/NavigationBar";
 import store from "../store";
 import IntroSection from "../components/intro/IntroSection";
 import About from "../components/about/About";
-import React from "react";
+import React, { useRef } from "react";
 import Skills from "../components/skills/Skills";
 import Services from '../components/services/Services';
 import LanguageSkills from "../components/skills/LanguageSkills";
@@ -68,6 +68,10 @@ const muiTheme = createTheme({
     }
 })
 export default function Home() {
+    const connectRef = useRef()
+    const servicesRef = useRef()
+    const aboutRef = useRef()
+
     return (
         <Provider store={store}>
             <ThemeProvider theme={muiTheme}>
@@ -79,13 +83,18 @@ export default function Home() {
                 </Head>
 
                 <nav>
-                    <NavigationBar/>
+                    
+                    <NavigationBar servicesClick={() =>
+                    // @ts-ignore
+                     servicesRef.current && servicesRef.current.scrollIntoView()} 
+                    aboutClick={() => {}} 
+                    contactClick={() => {}}/>
                 </nav>
 
-                <Box component={'main'} display={'flex'} flexDirection={'column'} alignItems={'center'} gap={'47px'}>
+                <Box component={'main'} display={'flex'} flexDirection={'column'} alignItems={'center'} gap={'47px'} maxWidth={'100%'}>
                     <IntroSection/>
                     <About/>
-                    <Services/>
+                    <Services ref={servicesRef}/>
                     <Skills/>
                     <LanguageSkills/>
                     <Connect/>

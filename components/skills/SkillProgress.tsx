@@ -7,7 +7,7 @@ const SkillProgress = ({
                            icon
                        }: { title: string, percent: number, extra?: string, icon?: any }) => {
     return (
-        <Grid container spacing={3} alignItems={'center'}>
+        <Grid container spacing={2} alignItems={'center'}>
             {
                 icon &&
                 <Grid item>
@@ -16,7 +16,7 @@ const SkillProgress = ({
             }
 
             <Grid item>
-                <Typography variant={'subtitle2'} color={'textPrimary'} width={100}>
+                <Typography variant={'subtitle2'} color={'textPrimary'} width={50}>
                     {title}
                 </Typography>
             </Grid>
@@ -26,7 +26,7 @@ const SkillProgress = ({
                 <Grid container alignItems={'center'} spacing={1}>
                     <Grid item>
                         <LinearProgress variant={'determinate'} value={percent} color={'primary'}
-                                        sx={{width: '150px', borderRadius: '300px'}}/>
+                                        sx={{width: '100px', borderRadius: '300px'}}/>
                     </Grid>
 
                     <Grid item>
