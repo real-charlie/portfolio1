@@ -68,10 +68,6 @@ const muiTheme = createTheme({
     }
 })
 export default function Home() {
-    const connectRef = useRef()
-    const servicesRef = useRef()
-    const aboutRef = useRef()
-
     return (
         <Provider store={store}>
             <ThemeProvider theme={muiTheme}>
@@ -90,7 +86,7 @@ export default function Home() {
                 <Box component={'main'} display={'flex'} flexDirection={'column'} alignItems={'center'} gap={'47px'} maxWidth={'100%'}>
                     <IntroSection/>
                     <About/>
-                    <Services ref={servicesRef}/>
+                    <Services />
                     <Skills/>
                     <LanguageSkills/>
                     <Connect/>
